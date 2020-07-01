@@ -7,7 +7,7 @@ disqus:
 google-ID: 'UA-91332049-1'
 
 menu: 
-  - name: Featured Projects
+  - name: Tech Sharing
     submenu:
       - name: MicroBam
         link: /projects/microbam
