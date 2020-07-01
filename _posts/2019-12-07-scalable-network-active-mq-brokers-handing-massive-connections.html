@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  "Scalable Network of Active MQ brokers for handing massive connections"
-date:   2016-12-07 09:00:00 +0200
-published: 2016-12-07 09:00:00 +0200
+date:   2019-12-07 09:00:00 +0200
+published: 2019-12-07 09:00:00 +0200
 comments: true
 categories: integration
 tags: [messaging, integration, iot]
@@ -116,7 +116,7 @@ The strategy we can apply to shut down a broker (named c01 in this example) prop
 <p>
 There might be situations where this procedure is not enough. Messages may remain when no active consumers for those exist anywhere in the network. In this case, I recommend you to look at Josh Reagan's blog post:
 
-<a href="http://joshdreagan.github.io/2016/08/22/decommissioning_jboss_a-mq_brokers/">http://joshdreagan.github.io/2016/08/22/decommissioning_jboss_a-mq_brokers/</a>.
+<a href="http://joshdreagan.github.io/2019/08/22/decommissioning_jboss_a-mq_brokers/">http://joshdreagan.github.io/2019/08/22/decommissioning_jboss_a-mq_brokers/</a>.
 It describes how to read the message store to be decommissioned and forward all remaining messages.
 </p>
 <h2>How is the load distributed ?</h2>

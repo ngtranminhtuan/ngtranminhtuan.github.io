@@ -1,8 +1,8 @@
 ---
 layout: default
 title:  "Fuse Data Grid Integration via Hot Rod with Persistence and Indexing for Advanced Queries"
-date:   2017-04-07 01:00:00 +0200
-published: 2017-04-07 01:00:00 +0200
+date:   2019-04-07 01:00:00 +0200
+published: 2019-04-07 01:00:00 +0200
 comments: true
 categories: development
 tags: [jboss-fuse, data-grid, hot-rod, protobuf, lucene]
@@ -583,25 +583,25 @@ public class GenerateQuery {
 <pre>
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
  "uid": "1",
- "timestmp": "2017-04-07T19:30:00.000Z",
+ "timestmp": "2019-04-07T19:30:00.000Z",
  "name": "start",
  "content": "party started" }' 'http://localhost:7123/event/1'
 
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
 	"uid": "2",
-	"timestmp": "2017-04-07T22:15:00.000Z",
+	"timestmp": "2019-04-07T22:15:00.000Z",
 	"name": "incident",
 	"content": "police arrived" }' 'http://localhost:7123/event/2'
 
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
 	"uid": "3",
-	"timestmp": "2017-04-07T23:18:00.000Z",
+	"timestmp": "2019-04-07T23:18:00.000Z",
 	"name": "incident",
 	"content": "host arrested" }' 'http://localhost:7123/event/3'
 
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
  "uid": "4",
- "timestmp": "2017-04-07T23:20:00.000Z",
+ "timestmp": "2019-04-07T23:20:00.000Z",
  "name": "end",
  "content": "party ended" }' 'http://localhost:7123/event/4'
 </pre>
