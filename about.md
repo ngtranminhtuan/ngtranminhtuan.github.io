@@ -59,5 +59,5 @@ permalink: /about/
 
 - Email: [ngtranminhtuan@gmail.com](mailto:ngtranminhtuan@gmail.com)
 - GitHub: [https://github.com/ngtranminhtuan/](https://github.com/ngtranminhtuan/)
-- YouTube: [https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists](https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists)
-- LinkedIn: [https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/](https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/)
+- YouTube: [https://www.youtube.com/@minhtuannguyentran8364/videos](https://www.youtube.com/@minhtuannguyentran8364/videos)
+- LinkedIn: [https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256//](https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256//)
