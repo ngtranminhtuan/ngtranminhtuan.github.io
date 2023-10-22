@@ -4,24 +4,60 @@ title: About
 permalink: /about/
 ---
 
-MCU（ARM、PIC、AVR、TI）およびMPU（TI、フリースケール）で3年の経験があります。電子部品、電子回路、オシロスコープ、VOMデバッグスキルに関する深い知識があります。プロトコルについては、UART、SPI、I2C、RS232、MODBUS、CAN、USB、BLE、TCP / UDP、MQTT、SocketIOで2年の経験があります。私はアルゴリズム、データ構造、デザインパターンに強いです。 IoT業界については、ESP、Wifi、BLE、およびMEANスタックテクノロジーで1年の経験があります。特に、機械学習で1年の経験があります：NLP、コンピュータービジョン。 Embedded Linux Systemでは、u-boot、kernel デバイスドライバー、C ++アプリケーション（QT、LittlevGL、TouchGFX）をプログラムできます。
+## Employment
 
-私は論理的思考と数学と創造性に強いです。私はチームワークとチームリーダーが得意です。科学研究​​が可能で、新しい技術をすばやく吸収できる独学です。問題解決の経験を持ち、課題を克服し、規律と責任を持って仕事に最善を尽くします。高強度で社交的で熱意を持って仕事をします。
+### Data Science Engineer at FSOFT (2018 - Jan 2021)
 
-外国語については、英語をIELTSレベルとして使用できます。 そして、日本語では、N3スキルを使用できます。
+- Reduced sensor noise by 95% using techniques like Low/High Pass Filter, Kalman, and Particle Filter.
+- Boosted prediction accuracy by 20% and extraction speed by 30% with RNN-CNN hybrid networks.
+- Developed a scalable IoT backend serving 100k+ users using K8S, Nginx, and AWS auto-scaling.
 
-私は、組込みシステムとのIoTシステムのための大きな情熱を持っています。 日本での長い労働時間を願っています。
+### AI Software Engineer at Digital Media Professional (Apr 2021 - 2022)
 
-### More Information
+- Boosted Super-Point SLAM performance by 60% using Neural Networks and 8bit GPU-accelerated quantization in ONNX, reducing CPU-GPU bottlenecks.
+- Improved Visual/Lidar SLAM accuracy by 20% with FE/Feature matching, LBA/GBA, birdview transformations, and smart AI Perception.
+- Enhanced perception with efficient neural networks: 15% better object detection and depth estimation, swift GAN-based style-transfer, and 45% faster pose/landmark detection using pruning, quantization, and JAX.
+- Deployed perception module on a web system using FastAPI.
+- Developed 3M-params with 90% accuracy semantic segmentation model by self-attention mechanism.
 
-スキル: 組み込みシステム(OS　および　non-OS) および 機械学習です.
+### AI Software Engineer at Panasonic Co. (Apr 2022 - Present)
 
-### Contact me
+- Developed an IMU-based activity recognition algorithm, improving detection speed-up by 85%.
+- Enhanced face detection in low-light by 20% and improved face pose estimation precision by 15%.
+- Speeded up emotion recognition by 25% using quantization and pruning techniques.
+- Developed a "Dizzy" detection algorithm using GeoMagnetic and abnormal detecting algorithms.
+- Achieved 95% accuracy in detecting door sounds by transformer.
+- Crafted a whisper-openai conversation module, fine-tuned with Lora for engaging baby chats.
+- Innovated "touch-nose and tail" detection algorithm and speeded up by 95% using traditional AI techniques.
+- LLaMa - Lora high-load scalable system served by FastAPI, AWS, K8S, Docker, Nginx.
 
-[ngtranminhtuan@gmail.com](mailto:ngtranminhtuan@gmail.com)
+## Education
 
-[My Github Page: https://github.com/ngtranminhtuan/](https://github.com/ngtranminhtuan/)
+### University of Technology Education, Ho Chi Minh, Vietnam (2013 - Dec 2017)
 
-[My Channel: https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists](https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists)
+- Mechatronics and Robotics Engineer, Dec 2017, GPA: 3.2.
+- Thesis: Humanoid Robot for the elderly and hospitals accelerated by AI.
+- AI Practitioner in CoTAI - Center of Talent in AI.
 
-[My LinkedIn: https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/](https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/)
+## Additional Experience and Awards
+
+- Won second prize in AI Symptom healthcare contest.
+- Tensorflow Developer certified by Google.
+- AWS Certified Cloud Practitioner.
+- Deep Learning certified by DeepAI in NLP, Vision, and Time Series.
+
+## Languages and Technologies
+
+- **Languages**: Python, C/C++, Javascript, Java, Go, Shell Scripting.
+- **Technologies**: ReactJS/Redux, FastAPI, Pytorch, Tensorflow, TensorRT, JAX, OpenCV, scikit-learn, ONNX, D3.js, GraphQL, Matplotlib, MongoDB/PostgreSQL.
+- **AI**: LLaMa Lora fine-tuning, whisper, OpenAI prompt, 2D/3D object detection, segmentation and classification, depth estimation, face detection, emotion detection, face pose estimation, face landmark estimation, body-pose estimation, multi-modal activity recognition, BERT, transformer, RNN, CNN, Time series analysis/estimation.
+- **Neural Networks Optimization**: Pruning, Quantization, Distillation.
+- **CI/CD and Cloud**: Jenkins, GitHub Actions, Docker, K8s, Nginx, AWS, and GCP.
+- Proficiency in algorithm and data structure.
+
+## Contact Information
+
+- Email: [ngtranminhtuan@gmail.com](mailto:ngtranminhtuan@gmail.com)
+- GitHub: [https://github.com/ngtranminhtuan/](https://github.com/ngtranminhtuan/)
+- YouTube: [https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists](https://www.youtube.com/channel/UCIUUAjf2HV-TPXQwjVC0LzA/playlists)
+- LinkedIn: [https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/](https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/)
