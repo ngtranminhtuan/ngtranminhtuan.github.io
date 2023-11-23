@@ -60,4 +60,4 @@ permalink: /about/
 - Email: [ngtranminhtuan@gmail.com](mailto:ngtranminhtuan@gmail.com)
 - GitHub: [https://github.com/ngtranminhtuan/](https://github.com/ngtranminhtuan/)
 - YouTube: [https://www.youtube.com/@minhtuannguyentran8364/videos](https://www.youtube.com/@minhtuannguyentran8364/videos)
-- LinkedIn: [https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256//](https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256//)
+- LinkedIn: [https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256//](https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256/)
