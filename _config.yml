@@ -37,7 +37,7 @@ exclude:
 include: ["_pages"]
 permalink: /posts/:title/
 excerpt_separator: <!--more-->
-author: https://www.linkedin.com/in/minh-tuan-nguyen-tran-3449a2137/
+author: https://www.linkedin.com/in/minh-tuan-nguyen-tran-581220256/
 
 host: 0.0.0.0
 
