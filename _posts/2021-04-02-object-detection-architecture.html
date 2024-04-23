@@ -78,5 +78,15 @@ Using weight init to set bias conv detect = -1 to almost anchor output will over
 Set bias conv classify = -3 to accuracy from start, is background, only learn positive<br>
 </p>
 
-<h2>Mask R-CNN</h2>
+<h2>Mask R-CNN/Faster R-CNN</h2>
+<h3>Architecture</h3>
+<img src="/assets/images/posts/object-detection-architecture/maskrcnn-big-picture.png" alt="Yolov8">
++ DETR and Faster R-CNN have the same params. Faster R-CNN better mAP than DETR in small object. But normal object is better.<br>
++ R is Region Proposal Network, -> Classify and regression.<br>
++ Mask is a segmentation to offer RoIPool. We need to fine tune Mask in 1st phase. After that, Object Det fine-tuning<br>
++ Using Feature Pyramid Networks (FPNs).<br>
 
+<h3>Loss</h3>
++ Classification Loss: BCE or CE. (multilabel or unilabel)
++ Mask Loss: Binary Cross-Entropy for every pixel.
++ BBox Loss: Smooth L1 Loss (regression loss)
