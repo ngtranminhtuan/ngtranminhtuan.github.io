@@ -15,7 +15,9 @@ tags: [deeplearning, machinelearning, AI]
 
 <h3>Architecture</h3>
 <img src="/assets/images/posts/object-detection-architecture/top.jpg" alt="Detection Transformer">
-<p> Output: 
+
+
+<p> Output: <br>
     + pred_logits: The classification logits for each query, which predict the probability of each class for the detected objects, including a "no-object" class.<br>
     + pred_boxes: The coordinates of the predicted bounding boxes normalized to the size of the image.<br>
     + aux_outputs: Additional outputs from each transformer decoder layer, used when auxiliary losses are activated. <br>
@@ -55,6 +57,25 @@ In Yolo, we have Anchor-based technique to stable learning. Model classify ancho
 + Assorted hyperparameters<br>
 + IOU thresholds và loss functions<br>
 + Attention Mechanism<br>
+</p>
+
+<h3>Data Augumentation</h3>
+<p>
+    Using Mosaic Mixup Augumentation to avoid overfiting and improve accuracy in test.
+</p>
+
+<h3>Loss</h3>
++ Varifocal loss <br>
++ BCE loss <br>
++ BCE loss <br>
++ Bbox loss <br>
++ RotatedBboxLoss<br>
++ KeypointLoss<br>
+
+<h3>Initial technique</h3>
+<p>
+Using weight init to set bias conv detect = -1 to almost anchor output will overlapse with groundtruth.<br>
+Set bias conv classify = -3 to accuracy from start, is background, only learn positive<br>
 </p>
 
 <h2>Mask R-CNN</h2>
