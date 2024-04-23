@@ -65,12 +65,15 @@ In Yolo, we have Anchor-based technique to stable learning. Model classify ancho
 </p>
 
 <h3>Loss</h3>
-+ Varifocal loss <br>
-+ BCE loss <br>
-+ BCE loss <br>
-+ Bbox loss <br>
-+ RotatedBboxLoss<br>
-+ KeypointLoss<br>
+
+<p>
+    + Varifocal loss <br>
+    + BCE loss <br>
+    + BCE loss <br>
+    + Bbox loss <br>
+    + RotatedBboxLoss<br>
+    + KeypointLoss<br>
+</p>
 
 <h3>Initial technique</h3>
 <p>
@@ -80,13 +83,20 @@ Set bias conv classify = -3 to accuracy from start, is background, only learn po
 
 <h2>Mask R-CNN/Faster R-CNN</h2>
 <h3>Architecture</h3>
+
 <img src="/assets/images/posts/object-detection-architecture/maskrcnn-big-picture.png" alt="Yolov8">
-+ DETR and Faster R-CNN have the same params. Faster R-CNN better mAP than DETR in small object. But normal object is better.<br>
-+ R is Region Proposal Network, -> Classify and regression.<br>
-+ Mask is a segmentation to offer RoIPool. We need to fine tune Mask in 1st phase. After that, Object Det fine-tuning<br>
-+ Using Feature Pyramid Networks (FPNs).<br>
+
+<p>
+    + DETR and Faster R-CNN have the same params. Faster R-CNN better mAP than DETR in small object. But normal object is better.<br>
+    + R is Region Proposal Network, -> Classify and regression.<br>
+    + Mask is a segmentation to offer RoIPool. We need to fine tune Mask in 1st phase. After that, Object Det fine-tuning<br>
+    + Using Feature Pyramid Networks (FPNs).<br>
+</p>
 
 <h3>Loss</h3>
-+ Classification Loss: BCE or CE. (multilabel or unilabel)<br>
-+ Mask Loss: Binary Cross-Entropy for every pixel.<br>
-+ BBox Loss: Smooth L1 Loss (regression loss)<br>
+
+<p>
+    + Classification Loss: BCE or CE. (multilabel or unilabel)<br>
+    + Mask Loss: Binary Cross-Entropy for every pixel.<br>
+    + BBox Loss: Smooth L1 Loss (regression loss)<br>
+</p>
