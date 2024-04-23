@@ -16,25 +16,25 @@ tags: [deeplearning, machinelearning, AI]
 <h3>Architecture</h3>
 <img src="/assets/images/posts/object-detection-architecture/top.jpg" alt="Detection Transformer">
 <p> Output: 
-    + pred_logits: The classification logits for each query, which predict the probability of each class for the detected objects, including a "no-object" class.
-    + pred_boxes: The coordinates of the predicted bounding boxes normalized to the size of the image.
-    + aux_outputs: Additional outputs from each transformer decoder layer, used when auxiliary losses are activated. 
+    + pred_logits: The classification logits for each query, which predict the probability of each class for the detected objects, including a "no-object" class.<br>
+    + pred_boxes: The coordinates of the predicted bounding boxes normalized to the size of the image.<br>
+    + aux_outputs: Additional outputs from each transformer decoder layer, used when auxiliary losses are activated. <br>
 </p>
 <p>
-    MLP (Multi-Layer Perceptron): A simple fully connected network used within the DETR model to process features (e.g., to compute bounding box coordinates).
+    MLP (Multi-Layer Perceptron): A simple fully connected network used within the DETR model to process features (e.g., to compute bounding box coordinates).<br>
 </p>
 <p>
 QKV:
-+ Q: using embedding to represent objects
-+ K and V: projected to KV by linear layers. Key for correlations between query and position in image.
-V offer info to update status of query in loop of transformer. 
++ Q: using embedding to represent objects<br>
++ K and V: projected to KV by linear layers. Key for correlations between query and position in image.<br>
+V offer info to update status of query in loop of transformer. <br>
 </p>
 <h3>Metrics/Loss</h3>
 <p>
-SetCriterion: This class calculates several losses for training the DETR model. It uses:
-    + A Hungarian matcher to associate predicted boxes and classes with ground truth boxes and classes.
-    + Loss calculations for classification (loss_ce), bounding box regression (loss_bbox), GIoU (loss_giou), and optionally, mask losses (loss_mask, loss_dice) if segmentation masks are being predicted.
-    + Cardinality loss (loss_cardinality) which measures the error in the number of predicted objects versus the actual number of objects.
+SetCriterion: This class calculates several losses for training the DETR model. It uses:<br>
+    + A Hungarian matcher to associate predicted boxes and classes with ground truth boxes and classes.<br>
+    + Loss calculations for classification (loss_ce), bounding box regression (loss_bbox), GIoU (loss_giou), and optionally, mask losses (loss_mask, loss_dice) if segmentation masks are being predicted.<br>
+    + Cardinality loss (loss_cardinality) which measures the error in the number of predicted objects versus the actual number of objects.<br>
 </p>
 
 <h2>CNN</h2>
@@ -43,18 +43,18 @@ SetCriterion: This class calculates several losses for training the DETR model. 
 
 <h3>Architecture</h3>
 <p>
-Using Convol technique with kernel for scaning -> learning feature from images.
-In Yolo, we have Anchor-based technique to stable learning. Model classify anchor box and minimize IoU.
-+ Bottle-neck block
-+ Spatial Pyramid Pooling - Fast
-+ Skip connections
-+ Concatenation
-+ SiLU
-+ Batch Normalization
-+ Max Pooling layers
-+ Assorted hyperparameters
-+ IOU thresholds và loss functions
-+ Attention Mechanism
+Using Convol technique with kernel for scaning -> learning feature from images.<br>
+In Yolo, we have Anchor-based technique to stable learning. Model classify anchor box and minimize IoU.<br>
++ Bottle-neck block<br>
++ Spatial Pyramid Pooling - Fast<br>
++ Skip connections<br>
++ Concatenation<br>
++ SiLU<br>
++ Batch Normalization<br>
++ Max Pooling layers<br>
++ Assorted hyperparameters<br>
++ IOU thresholds và loss functions<br>
++ Attention Mechanism<br>
 </p>
 
 <h2>Mask R-CNN</h2>
