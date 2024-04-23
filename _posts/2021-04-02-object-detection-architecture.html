@@ -10,16 +10,52 @@ tags: [deeplearning, machinelearning, AI]
 
 <p>In Computer Vision, Object Detection is very essential problem. We had a lot of architecture: Dense, CNN, Transformer.... Today, we'll deep dive into it.</p>
 <h2>Transformer Based</h2>
-<p>More detailed text can go here, including examples, code snippets, or any other relevant information.</p>
+<p> Anchor-based approach of Yolo can improve speed, but we need NMS and some post process for noise filer </p>
+<p> It's waste time in tuning. So we can use Transformer architecture for end to end training and inference.</p>
+
 <h3>Architecture</h3>
-
+<img src="/assets/images/posts/object-detection-architecture/top.jpg" alt="Detection Transformer">
+<p> Output: 
+    + pred_logits: The classification logits for each query, which predict the probability of each class for the detected objects, including a "no-object" class.
+    + pred_boxes: The coordinates of the predicted bounding boxes normalized to the size of the image.
+    + aux_outputs: Additional outputs from each transformer decoder layer, used when auxiliary losses are activated. 
+</p>
+<p>
+    MLP (Multi-Layer Perceptron): A simple fully connected network used within the DETR model to process features (e.g., to compute bounding box coordinates).
+</p>
+<p>
+QKV:
++ Q: using embedding to represent objects
++ K and V: projected to KV by linear layers. Key for correlations between query and position in image.
+V offer info to update status of query in loop of transformer. 
+</p>
 <h3>Metrics/Loss</h3>
-
-<h3>Train/Val/Test</h3>
-
+<p>
+SetCriterion: This class calculates several losses for training the DETR model. It uses:
+    + A Hungarian matcher to associate predicted boxes and classes with ground truth boxes and classes.
+    + Loss calculations for classification (loss_ce), bounding box regression (loss_bbox), GIoU (loss_giou), and optionally, mask losses (loss_mask, loss_dice) if segmentation masks are being predicted.
+    + Cardinality loss (loss_cardinality) which measures the error in the number of predicted objects versus the actual number of objects.
+</p>
 
 <h2>CNN</h2>
 <img src="/assets/images/posts/object-detection-architecture/ResNet50.png" alt="ResNet BackBone">
+<img src="/assets/images/posts/object-detection-architecture/yolov8.png" alt="Yolov8">
 
-<h2>CNN-LSTM</h2>
+<h3>Architecture</h3>
+<p>
+Using Convol technique with kernel for scaning -> learning feature from images.
+In Yolo, we have Anchor-based technique to stable learning. Model classify anchor box and minimize IoU.
++ Bottle-neck block
++ Spatial Pyramid Pooling - Fast
++ Skip connections
++ Concatenation
++ SiLU
++ Batch Normalization
++ Max Pooling layers
++ Assorted hyperparameters
++ IOU thresholds và loss functions
++ Attention Mechanism
+</p>
+
+<h2>Mask R-CNN</h2>
 
