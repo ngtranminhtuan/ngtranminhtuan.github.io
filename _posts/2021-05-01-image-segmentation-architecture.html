@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Image Segmentation Architecture"
+date: 2021-05-01 09:00:00 +0700
+published: 2021-05-02 09:00:00 +0700
+comments: true
+categories: development
+tags: [deeplearning, machinelearning, AI]
+---
+
+<p>In Computer Vision, Object Detection is very essential problem. We had a lot of architecture: Dense, CNN, Transformer.... Today, we'll deep dive into it.</p>
+<h2>Transformer Based</h2>
+<p> Anchor-based approach of Yolo can improve speed, but we need NMS and some post process for noise filer </p>
+<p> It's waste time in tuning. So we can use Transformer architecture for end to end training and inference.</p>
+
+<h3>Architecture</h3>
+<img src="/assets/images/posts/object-detection-architecture/top.jpg" alt="Detection Transformer">
+
+Output:
+<ul> 
+    <li>The classification logits for each query, which predict the probability of each class for the detected objects, including a "no-object" class</li>
+    <li>The coordinates of the predicted bounding boxes normalized to the size of the image</li>
+    <li>aux_outputs: Additional outputs from each transformer decoder layer, used when auxiliary losses are activated</li> 
+</ul>
+<p>
+MLP (Multi-Layer Perceptron): A simple fully connected network used within the DETR model to process features (e.g., to compute bounding box coordinates).<br>
+</p>
+<p>QKV:</p>
+<ul>
+    <li>Q: using embedding to represent objects</li> 
+    <li>K and V: projected to KV by linear layers. Key for correlations between query and position in image.</li> 
+    <li>V offer info to update status of query in loop of transformer.</li> 
+</ul>
+
+<h3>Metrics/Loss</h3>
+
+<p>SetCriterion: This class calculates several losses for training the DETR model. It uses:</p>
+<ul>
+    <li>A Hungarian matcher to associate predicted boxes and classes with ground truth boxes and classes.</li> 
+    <li>Loss calculations for classification (loss_ce), bounding box regression (loss_bbox), GIoU (loss_giou), and optionally, mask losses (loss_mask, loss_dice) if segmentation masks are being predicted.</li> 
+    <li>Cardinality loss (loss_cardinality) which measures the error in the number of predicted objects versus the actual number of objects.</li> 
+</ul>
+
+<h2>CNN</h2>
+<img src="/assets/images/posts/object-detection-architecture/ResNet50.png" alt="ResNet BackBone">
+<img src="/assets/images/posts/object-detection-architecture/yolov8.png" alt="Yolov8">
+
+<h3>Architecture</h3>
+<p>Using Convol technique with kernel for scaning, and then, learning feature from images.</p>
+<p>In Yolo, we have Anchor-based technique to stable learning. Model classify anchor box and minimize IoU.</p>
+<ul>
+    <li>Bottle-neck block</li> 
+    <li>Spatial Pyramid Pooling - Fast</li> 
+    <li>Spatial Pyramid Pooling - Fast</li>
+    <li>Spatial Pyramid Pooling - Fast</li>
+    <li>SiLU</li>
+    <li>Batch Normalization</li> 
+    <li>Max Pooling layers</li>
+    <li>Assorted hyperparameters</li> 
+    <li>IOU thresholds và loss functions</li> 
+    <li>Attention Mechanism</li>
+</ul>
+
+<h3>Data Augumentation</h3>
+<p>
+    Using Mosaic Mixup Augumentation to avoid overfiting and improve accuracy in test.
+</p>
+
+<h3>Loss</h3>
+
+<ul>
+    <li>Varifocal loss</li> 
+    <li>BCE loss</li>
+    <li>CE loss</li> 
+    <li>Bbox loss</li> 
+    <li>RotatedBboxLoss</li> 
+    <li>KeypointLoss</li>
+</ul>
+
+<h3>Initial technique</h3>
+<p>
+Using weight init to set bias conv detect = -1 to almost anchor output will overlapse with groundtruth.
+Set bias conv classify = -3 to accuracy from start, is background, only learn positive
+</p>
+
+<h2>Mask R-CNN/Faster R-CNN</h2>
+<h3>Architecture</h3>
+
+<img src="/assets/images/posts/object-detection-architecture/maskrcnn-big-picture.png" alt="Yolov8">
+
+<ul>
+    <li>DETR and Faster R-CNN have the same params. Faster R-CNN better mAP than DETR in small object. But normal object is better.</li> 
+    <li>R is Region Proposal Network, and then, Classify and regression.</li>
+    <li>Mask is a segmentation to offer RoIPool. We need to fine tune Mask in 1st phase. After that, Object Det fine-tuning</li>
+    <li>Using Feature Pyramid Networks (FPNs).</li>
+</ul>
+
+<h3>Loss</h3>
+
+<ul>
+    <li>Classification Loss: BCE or CE. (multilabel or unilabel)</li>
+    <li>Mask Loss: Binary Cross-Entropy for every pixel.</li>
+    <li> BBox Loss: Smooth L1 Loss (regression loss)</li>
+</ul>
+
+
+
